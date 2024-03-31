@@ -1,9 +1,9 @@
 ---
-abstract: TODO
+abstract: 'PDF DateTime Parser and Formatter.'
 author:
   - 'Michal Josef Spacek <skim@cpan.org>'
 build_requires:
-  English: 0
+  DateTime: 0
   ExtUtils::MakeMaker: 6.59
   Test::More: 0
   Test::NoWarnings: 0
@@ -23,8 +23,7 @@ no_index:
     - t
     - xt
 requires:
-  Class::Utils: 0.03
-  Error::Pure: 0.15
+  DateTime::Format::Builder: 0
   perl: 5.6.2
 resources:
   bugtracker: https://github.com/michal-josef-spacek/DateTime-Format-PDF/issues

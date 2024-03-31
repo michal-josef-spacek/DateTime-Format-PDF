@@ -5,7 +5,7 @@ use warnings;
 use inc::Module::Install;
 
 # Definition.
-abstract 'TODO';
+abstract 'PDF DateTime Parser and Formatter.';
 author 'Michal Josef Spacek <skim@cpan.org>';
 author_requires 'English' => 0;
 author_requires 'File::Object' => 0.05;
@@ -18,12 +18,11 @@ name 'DateTime-Format-PDF';
 perl_version 5.006002;
 readme_from 'PDF.pm';
 recursive_author_tests('xt');
-requires 'Class::Utils' => 0.03;
-requires 'Error::Pure' => 0.15;
+requires 'DateTime::Format::Builder' => 0;
 resources 'bugtracker' => 'https://github.com/michal-josef-spacek/DateTime-Format-PDF/issues';
 resources 'homepage' => 'https://github.com/michal-josef-spacek/DateTime-Format-PDF';
 resources 'repository' => 'git://github.com/michal-josef-spacek/DateTime-Format-PDF';
-test_requires 'English' => 0;
+test_requires 'DateTime' => 0;
 test_requires 'Test::More' => 0;
 test_requires 'Test::NoWarnings' => 0;
 tests_recursive;
