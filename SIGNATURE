@@ -1,0 +1,57 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.87.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+SHA256 f0ebcef8366879464344e90efd7aa967a6bb6641bc090afa19190796a0857c41 Changes
+SHA256 e9721661dbfb60dadebf3cd197cbc00239895aa73fb3431e19490cfad301cf99 LICENSE
+SHA256 e10f5b5097d9d3ebd3302ad6f4adf0969f55d25eed2aba6b62ab965427d4088f MANIFEST
+SHA256 50586fd92d033660d7a893665410a662882fcf518bdcc8a2ba7129b96eb48bc0 META.yml
+SHA256 f7e01b25433b4bddc97768bcc7bdf085eb43d05b64d3452dc336b3d9d3813a8e Makefile.PL
+SHA256 5935958a6b62a36c0b16057053e9938ba97d39dfb6b616a795c00d6c38599e29 PDF.pm
+SHA256 50f36d9df3fde1a7d976f02a3c28976a369338675d70cac5a980970ad59a3b69 README
+SHA256 1ea9edb9f2f61c54a7ddf42102d711d0fac9fc274a5c44f63a54d76cf25900c9 examples/format_pdf_string.pl
+SHA256 5f9348bc9755c78b57dab40306fbf3632346f6c28947fcf20cd4ee4896845be3 examples/parse_pdf_string.pl
+SHA256 cd5397bbe618f5bbd4e12a33b0cf5d21114e771c2dbd0ce28e2135beb52c35a8 inc/Module/Install.pm
+SHA256 8bd506c33fb78f10f6451413e931ca23541fcc4eebe05fcb7c7c9577341223c4 inc/Module/Install/AuthorRequires.pm
+SHA256 1b5430a46a35142ef8914d8c745196fca825defc9dfa7e389299bf294613825e inc/Module/Install/AuthorTests.pm
+SHA256 798836f9ccb8d204b1be31fc3835631f57e9d818b21a8f0d14bfcfb82ff4a72a inc/Module/Install/Base.pm
+SHA256 d64cd4c16f83c5baf11f64a44bea3a0abc060a49da5aba040f0eb01394bf75ab inc/Module/Install/Can.pm
+SHA256 65d7a6098bf3f829e8c1c2865476d3537aa6f0ad0ffc9149e10812c856529043 inc/Module/Install/Fetch.pm
+SHA256 70c4b77acab3ff51dfb318110369607cb109e1c319459249623b787cf3859750 inc/Module/Install/Makefile.pm
+SHA256 14556386168007ce913e669fc08a332ccdb6140246fd55a90c879b5190c1b57a inc/Module/Install/Metadata.pm
+SHA256 53825bc78e4c910b888160bc148c8bc211be58e02b99c8edcbf4854f95faa049 inc/Module/Install/ReadmeFromPod.pm
+SHA256 4c746c02c5cc19bed4c352e76205b4adff4c45ce8310d71294e1b83c059659c2 inc/Module/Install/Win32.pm
+SHA256 d3d9b4583243c470ae895defa4c44564485b53693cba1c50ab0320768f443e97 inc/Module/Install/WriteAll.pm
+SHA256 5d51ac8472b99732fdf88fd7348d712946df1b48be830f0c0e3bdc296d32b1a8 t/DateTime-Format-PDF/01-use.t
+SHA256 2fbf660f3baad44ca85c1b9fa0715fafee1ab98c80b8269a3a78efe590174b4e t/DateTime-Format-PDF/02-version.t
+SHA256 0bfc781dff1ddbcaf42bfe100af5b0660ad0907ae5135c6e549e62d87a881540 t/DateTime-Format-PDF/03-new.t
+SHA256 8fe6839c73ffb8ab142c24d76dede9789e9c905be4f4db21c6ff498d17870800 t/DateTime-Format-PDF/04-format_datetime.t
+SHA256 8230a5b00707b5e67c3a392b1ba40318df7a135673c322d7ed43e1a72f5e922f t/DateTime-Format-PDF/05-parse_datetime.t
+SHA256 57beeba2a21353203c61c4750e6b4e9c616dc9cc3bc5c1d1453b015942f91be0 xt/DateTime-Format-PDF/01-pod_coverage.t
+SHA256 c23f51817c6784c8b7ae83bd91e3eb3035887111c5af106ad3a2d0e2c4660987 xt/DateTime-Format-PDF/02-pod.t
+-----BEGIN PGP SIGNATURE-----
+
+iQGzBAEBAwAdFiEEbhzVZugfHqSVNvE7YSp92FNcjtAFAmYKfM8ACgkQYSp92FNc
+jtAXxgv/dpASyDzGfXFuhHf7xWNrzgH/ZDYBt8ePpIpFi2iGidtNQDP8ACoor1Fe
+rlgthHf/uM4nucGKlKOAsgqdoAXkhB8d9OhZe5HURwnilgwDeQ+DFnSjmL55TzQO
+Py0H39Cpci3fg2WkA5z/a7gB7tzBLFOk5zf3vYl02Wsp/wHvda7Fu9hFXE20PlMn
+jRKuX1Xg4Ey/+60dIvo1bwWe8gyhWTX065VPBGwHCr8HNb46sI5b7FkJc5HLED5G
+npeXJn3PLZBcx+GXBqBadQ9X1UecmGboZjCurBW7hDugCRm+XkU2XQFbFEp6SclD
+49VmJS0GF1ReTH8Hw5goMUafjIpPngaZgVO0KvVRhYsE60G1fG503eTyBQ1kQu+0
+OLBNGsrOKTceM8HNI0MzPrhgutRUqyskNQR2o8MgFTV5gaSEZQQG0m31ZqIP5Psa
+ry2BL+BjGH57kEwGR+iL1xXKizYzNaoqADegwLhjjXG37Mshi3tUXIyKJnghB2E8
+OOADvWtf
+=Rp6I
+-----END PGP SIGNATURE-----
