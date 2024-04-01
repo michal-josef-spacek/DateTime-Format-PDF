@@ -45,11 +45,22 @@ use DateTime::Format::Builder (
 		}],
 	},
 );
+use Error::Pure qw(err);
+use Scalar::Util qw(blessed);
 
 our $VERSION = 0.01;
 
 sub format_datetime {
 	my ($self, $dt) = @_;
+
+	if (! defined $dt
+		|| ! blessed($dt)
+		|| ! $dt->isa('DateTime')) {
+
+		err 'Bad DateTime object.',
+			'Value', $dt,
+		;
+	}
 
 	return $dt->strftime("D:%Y%m%d%H%M%S%z");
 }
@@ -187,7 +198,9 @@ TODO
 
 =head1 DEPENDENCIES
 
-L<DateTime::Format::Builder>.
+L<DateTime::Format::Builder>,
+L<Error::Pure>,
+L<Scalar::Util>.
 
 =head1 REPOSITORY
 

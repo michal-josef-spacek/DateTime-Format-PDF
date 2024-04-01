@@ -19,6 +19,8 @@ perl_version 5.006002;
 readme_from 'PDF.pm';
 recursive_author_tests('xt');
 requires 'DateTime::Format::Builder' => 0;
+requires 'Error::Pure' => 0;
+requires 'Scalar::Util' => 0;
 resources 'bugtracker' => 'https://github.com/michal-josef-spacek/DateTime-Format-PDF/issues';
 resources 'homepage' => 'https://github.com/michal-josef-spacek/DateTime-Format-PDF';
 resources 'repository' => 'git://github.com/michal-josef-spacek/DateTime-Format-PDF';

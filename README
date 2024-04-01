@@ -95,7 +95,7 @@ EXAMPLE2
      # PDF date: D:20240401084337+0000
 
 DEPENDENCIES
-    DateTime::Format::Builder.
+    DateTime::Format::Builder, Error::Pure, Scalar::Util.
 
 REPOSITORY
     <https://github.com/michal-josef-spacek/DateTime-Format-PDF>
