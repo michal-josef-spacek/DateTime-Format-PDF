@@ -3,7 +3,10 @@ use warnings;
 
 use DateTime;
 use DateTime::Format::PDF;
-use Test::More 'tests' => 2;
+use English;
+use Error::Pure::Utils qw(clean);
+use Test::MockObject;
+use Test::More 'tests' => 4;
 use Test::NoWarnings;
 
 # Test.
@@ -19,3 +22,21 @@ my $dt = DateTime->new(
 );
 my $ret = $obj->format_datetime($dt);
 is($ret, "D:20240123101112+0130", 'Format PDF datetime.');
+
+# Test.
+$obj = DateTime::Format::PDF->new;
+eval {
+	$obj->format_datetime('foo');
+};
+is($EVAL_ERROR, "Bad DateTime object.\n",
+	"Bad DateTime object (foo).");
+clean();
+
+# Test.
+$obj = DateTime::Format::PDF->new;
+eval {
+	$obj->format_datetime(Test::MockObject->new);
+};
+is($EVAL_ERROR, "Bad DateTime object.\n",
+	"Bad DateTime object (bad object).");
+clean();

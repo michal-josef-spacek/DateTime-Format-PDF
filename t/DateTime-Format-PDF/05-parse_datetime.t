@@ -2,7 +2,8 @@ use strict;
 use warnings;
 
 use DateTime::Format::PDF;
-use Test::More 'tests' => 96;
+use English;
+use Test::More 'tests' => 99;
 use Test::NoWarnings;
 
 # Test.
@@ -147,3 +148,27 @@ is($ret->hour, 11, 'Parse hour (11).');
 is($ret->minute, 10, 'Parse minute (10).');
 is($ret->second, 55, 'Parse second (55).');
 is($ret->time_zone->{'name'}, '-0230', 'Parse time zone (-0230).');
+
+# Test.
+$obj = DateTime::Format::PDF->new;
+eval {
+	$obj->parse_datetime("D:200203foo12111055-0230'");
+};
+like($EVAL_ERROR, qr{^Invalid date format: D:200203foo12111055-0230},
+	"Invalid date format (D:200203foo12111055-0230').");
+
+# Test.
+$obj = DateTime::Format::PDF->new;
+eval {
+	$obj->parse_datetime("D:200");
+};
+like($EVAL_ERROR, qr{^Invalid date format: D:200},
+	"Invalid date format (D:200').");
+
+# Test.
+$obj = DateTime::Format::PDF->new;
+eval {
+	$obj->parse_datetime("D:20000");
+};
+like($EVAL_ERROR, qr{^Invalid date format: D:20000},
+	"Invalid date format (D:20000').");
