@@ -6,4 +6,4 @@ use Test::More 'tests' => 2;
 use Test::NoWarnings;
 
 # Test.
-is($DateTime::Format::PDF::VERSION, 0.01, 'Version.');
+is($DateTime::Format::PDF::VERSION, 0.02, 'Version.');
