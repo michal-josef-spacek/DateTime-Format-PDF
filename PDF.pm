@@ -148,7 +148,12 @@ Returns string.
 
 =head1 ERRORS
 
-TODO
+ format_datetime():
+         Bad DateTime object.
+                 Value: %s
+
+ parse_datetime():
+         Invalid date format: %s
 
 =head1 EXAMPLE1
 

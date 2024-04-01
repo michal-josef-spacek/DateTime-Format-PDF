@@ -52,7 +52,12 @@ METHODS
     Returns string.
 
 ERRORS
-    TODO
+     format_datetime():
+             Bad DateTime object.
+                     Value: %s
+
+     parse_datetime():
+             Invalid date format: %s
 
 EXAMPLE1
      use strict;
