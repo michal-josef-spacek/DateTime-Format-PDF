@@ -19,6 +19,7 @@ meta-spec:
 name: DateTime-Format-PDF
 no_index:
   directory:
+    - examples
     - inc
     - t
     - xt

@@ -1,0 +1,115 @@
+NAME
+    DateTime::Format::PDF - PDF DateTime Parser and Formatter.
+
+SYNOPSIS
+     use DateTime::Format::PDF;
+
+     my $obj = DateTime::Format::PDF->new;
+     my $dt = $obj->parse_datetime($pdf_date);
+     my $pdf_date = $obj->format_datetime($dt);
+
+DESCRIPTION
+    This module understands the formats used by PDF file. It can be used to
+    parse these formats in order to create DateTime objects, and it can take
+    a DateTime object and produce a string representing it in a format
+    accepted by PDF.
+
+METHODS
+  "new"
+     my $obj = DateTime::Format::PDF->new(%params);
+
+    Constructor.
+
+    Returns instance of object.
+
+  "parse_datetime"
+     my $dt = $obj->parse_datetime($pdf_date);
+
+    Parse PDF datetime string.
+
+    Possible valid strings:
+
+    "D:YYYY"
+    "D:YYYYMM"
+    "D:YYYYMMDD"
+    "D:YYYYMMDDHH"
+    "D:YYYYMMDDHHmm"
+    "D:YYYYMMDDHHmmSS"
+    "D:YYYYMMDDHHmmSSZ"
+    "D:YYYYMMDDHHmmSSOHHmm"
+    "D:YYYYMMDDHHmmSSOHH'mm"
+    "D:YYYYMMDDHHmmSSOHH'mm'"
+    "D:YYYYMMDDHHmmSSOHHmm'"
+
+    Returns DateTime object.
+
+  "format_datetime"
+     my $pdf_date = $obj->format_datetime($dt);
+
+    Format DateTime object to PDF datetime string. Output value is
+    "D:YYYYMMDDHHmmSSOHHmm".
+
+    Returns string.
+
+ERRORS
+    TODO
+
+EXAMPLE1
+     use strict;
+     use warnings;
+
+     use DateTime::Format::PDF;
+
+     # Object.
+     my $obj = DateTime::Format::PDF->new;
+
+     # Parse date.
+     my $dt = $obj->parse_datetime("D:20240401084337-01'30");
+
+     # Print out.
+     print $dt->strftime("%a, %d %b %Y %H:%M:%S %z")."\n";
+
+     # Output like:
+     # Mon, 01 Apr 2024 08:43:37 -0130
+
+EXAMPLE2
+     use strict;
+     use warnings;
+
+     use DateTime;
+     use DateTime::Format::PDF;
+
+     # Object.
+     my $obj = DateTime::Format::PDF->new;
+
+     # Example date.
+     my $dt = DateTime->now;
+
+     # Format.
+     my $pdf_date = $obj->format_datetime($dt);
+
+     # Print out.
+     print "PDF date: $pdf_date\n";
+
+     # Output like:
+     # PDF date: D:20240401084337+0000
+
+DEPENDENCIES
+    DateTime::Format::Builder.
+
+REPOSITORY
+    <https://github.com/michal-josef-spacek/DateTime-Format-PDF>
+
+AUTHOR
+    Michal Josef Špaček <mailto:skim@cpan.org>
+
+    <http://skim.cz>
+
+LICENSE AND COPYRIGHT
+    © 2024 Michal Josef Špaček
+
+    BSD 2-Clause License
+
+VERSION
+    0.01
+

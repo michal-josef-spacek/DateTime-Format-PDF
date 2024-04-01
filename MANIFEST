@@ -1,4 +1,6 @@
 Changes
+examples/format_pdf_string.pl
+examples/parse_pdf_string.pl
 inc/Module/Install.pm
 inc/Module/Install/AuthorRequires.pm
 inc/Module/Install/AuthorTests.pm
