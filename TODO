@@ -1,6 +1,5 @@
 TODO
 ====
-2. Example to doc with PDF::API2?
 3.
 
 Applied
@@ -8,3 +7,6 @@ Applied
 1. Better error handling?
 e.g. $obj->format_datetime(Test::MockObject->new); returns non-sense.
 NONE [20240401] skim
+
+2. Example to doc with PDF::API2?
+OK [20240401] skim

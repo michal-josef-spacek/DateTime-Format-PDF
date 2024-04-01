@@ -1,6 +1,7 @@
 Changes
 examples/format_pdf_string.pl
 examples/parse_pdf_string.pl
+examples/read_dates_from_pdf_api2.pl
 examples/read_dates_from_pdf_builder.pl
 inc/Module/Install.pm
 inc/Module/Install/AuthorRequires.pm
