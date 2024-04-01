@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 use DateTime::Format::PDF;
-use Test::More 'tests' => 88;
+use Test::More 'tests' => 96;
 use Test::NoWarnings;
 
 # Test.
@@ -126,7 +126,19 @@ is($ret->time_zone->{'name'}, '+0130', 'Parse time zone (+0130).');
 
 # Test.
 $obj = DateTime::Format::PDF->new;
-$ret = $obj->parse_datetime("D:20020312111055-02'30");
+$ret = $obj->parse_datetime("D:20020312111055-02'30'");
+isa_ok($ret, 'DateTime');
+is($ret->year, 2002, 'Parse year (2002).');
+is($ret->month, 3, 'Parse month (3).');
+is($ret->day, 12, 'Parse day (12).');
+is($ret->hour, 11, 'Parse hour (11).');
+is($ret->minute, 10, 'Parse minute (10).');
+is($ret->second, 55, 'Parse second (55).');
+is($ret->time_zone->{'name'}, '-0230', 'Parse time zone (-0230).');
+
+# Test.
+$obj = DateTime::Format::PDF->new;
+$ret = $obj->parse_datetime("D:20020312111055-0230'");
 isa_ok($ret, 'DateTime');
 is($ret->year, 2002, 'Parse year (2002).');
 is($ret->month, 3, 'Parse month (3).');
