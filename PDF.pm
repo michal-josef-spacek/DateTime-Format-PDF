@@ -40,10 +40,6 @@ use DateTime::Format::Builder (
 			'regex' => qr{^D:(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})$},
 			'params' => [qw(year month day hour minute second)],
 		}, {
-			'length' => 17,
-			'regex' => qr{^D:(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})Z$},
-			'params' => [qw(year month day hour minute second)],
-		}, {
 			'regex' => qr{^D:(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})([+\-]\d{4})$},
 			'params' => [qw(year month day hour minute second time_zone)],
 		}],
