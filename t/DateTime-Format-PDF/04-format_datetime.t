@@ -6,7 +6,7 @@ use DateTime::Format::PDF;
 use English;
 use Error::Pure::Utils qw(clean);
 use Test::MockObject;
-use Test::More 'tests' => 4;
+use Test::More 'tests' => 5;
 use Test::NoWarnings;
 
 # Test.
@@ -39,4 +39,13 @@ eval {
 };
 is($EVAL_ERROR, "Bad DateTime object.\n",
 	"Bad DateTime object (bad object).");
+clean();
+
+# Test.
+$obj = DateTime::Format::PDF->new;
+eval {
+	$obj->format_datetime;
+};
+is($EVAL_ERROR, "Bad DateTime object.\n",
+	"Bad DateTime object (undef).");
 clean();
